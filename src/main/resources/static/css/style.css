@@ -1,0 +1,15 @@
+body{
+    background-color: azure;
+}
+
+.blockquotehead h1{
+    font-size: 3rem;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    color: tomato;
+}
+
+.card h2{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+}

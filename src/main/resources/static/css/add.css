@@ -6,11 +6,11 @@ body{
     font-size: 3rem;
     font-family:Verdana, Geneva, Tahoma, sans-serif;
     font-weight: bold;
-    color: tomato;
+    color:olivedrab;
 }
 
 .btn{
-    color: black;
+    color: whitesmoke;
     border: 1px solid black;
     border-color: cadetblue;
     background-color: teal;

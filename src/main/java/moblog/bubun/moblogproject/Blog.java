@@ -18,7 +18,7 @@ public class Blog {
         return "add";
     }
 
-    @GetMapping("explore")
+    @GetMapping("/explore")
     public String getExplopreBlog() {
         return "explore";
     }

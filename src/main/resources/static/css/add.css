@@ -21,8 +21,17 @@ body{
     border-color: cadetblue;
     background-color: teal;
     width: 5rem;
+    justify-content: end;
+    align-items: end;
 }
 .btn:hover{
     background-color: green;
     color: white;
+}
+
+form{
+    box-shadow: 5px 9px 8px #888888;
+    display: inline block;
+    background-color:white;
+    padding: 1rem;
 }

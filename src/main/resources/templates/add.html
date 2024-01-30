@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head data-th-replace="~{fragment :: head-section}"></head>
+    <head data-th-replace="~{fragment :: head-section(name='Add Blog')}"></head>
     <body>
         <link rel="stylesheet" href="/css/add.css">
         <div class="container">
@@ -16,7 +16,7 @@
                         <textarea id="exampleFormControlTextarea1" rows="12" class="form-control"></textarea>
                     </div>
                     
-                    <input type="submit" value="Add" class="btn gap-2 col-4 mx-auto" >
+                    <input type="submit" value="Add" class="btn" >
                 </form>
             </section>   
         </div>

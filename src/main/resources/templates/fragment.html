@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
-    <head data-th-fragment="head-section">
+    <head data-th-fragment="head-section(name)">
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -10,7 +10,7 @@
             integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
             crossorigin="anonymous" referrerpolicy="no-referrer" />
             
-        <title>Mo-Blog</title>
+        <title data-th-utext="${name}"></title>
     </head>
 
     <body>
@@ -18,14 +18,14 @@
         <nav class="navbar navbar-light mb-3 " data-th-fragment="heading-link-section(url,name)">
             <figure>
                 <blockquote class="blockquotehead">
-                    <h1 data-th-text="|WELCOME TO Mo-Blog|"></h1>
+                    <h1 data-th-utext="|WELCOME TO Mo-Blog|"></h1>
                     <p>Uncover unique <cite title="Source Title">Destinations</cite> , expert tips, and inspiration for your next extraordinary journey.</p>
                 </blockquote> 
                 <hr>  
             </figure>
             <ul class="nav nav-pills nav-fill justify-content-end">
                 <li class="nav-item">
-                    <a class="nav-link" aria-current="page" data-th-href="${url}" data-th-text="${name}"></a>
+                    <a class="nav-link" aria-current="page" data-th-href="${url}" data-th-utext="${name}"></a>
                 </li>
             </ul>
         </nav>
@@ -48,7 +48,7 @@
                     <a data-mdb-ripple-init class="btn text-white btn-floating m-1" style="background-color: #333333"
                         href="https://github.com/Jyonmishra750" role="button"><i class="fab fa-github"></i></a>
 
-                    <div class="text-center p-3" data-th-text="|© 2020 Copyright@Jyonmishra|"></div>
+                    <div class="text-center p-3" data-th-utext="|© 2020 Copyright@Jyonmishra|"></div>
                 </section>
             </div>         
         </footer>

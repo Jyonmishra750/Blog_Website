@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head data-th-replace="~{fragment :: head-section}"></head>
+<head data-th-replace="~{fragment :: head-section(name='Mo-Blog')}"></head>
 
 <body>
     <link rel="stylesheet" href="/css/style.css">
     <div class="container">
         <nav data-th-replace="~{fragment :: heading-link-section(url='/add', name='Add Blog')}"></nav>
-
-        <div class="row row-cols-1 row-cols-md-2 g-4">
+        
+        <article class="row row-cols-1 row-cols-md-2 g-4">
             <div class="col">
                 <div class="card">
                     <img src="/images/Deomali.png" class="img img-fluid" alt="Deomali Hill">
@@ -68,8 +68,8 @@
                     </div>
                 </div>
             </div>
-        </div>
-
+        </article>
+        
         <footer data-th-replace="~{fragment :: footer-section}"></footer>
 </body>
 

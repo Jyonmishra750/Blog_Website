@@ -17,15 +17,13 @@ body{
 
 .btn{
     color: whitesmoke;
-    border: 1px solid black;
     border-color: cadetblue;
     background-color: teal;
     width: 5rem;
-    justify-content: end;
-    align-items: end;
+    box-shadow: 0px 1px 4px black;
 }
 .btn:hover{
-    background-color: green;
+    background-color: brown;
     color: white;
 }
 

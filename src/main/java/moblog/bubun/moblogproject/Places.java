@@ -9,7 +9,7 @@ import lombok.Setter;
 @AllArgsConstructor
 @Getter
 @Setter
-public class Place {
+public class Places {
     private String heading;
     private String description;
 

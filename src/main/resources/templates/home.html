@@ -6,70 +6,71 @@
 <body>
     <link rel="stylesheet" href="/css/style.css">
     <div class="container">
-        <nav data-th-replace="~{fragment :: heading-link-section(url='/add', name='Add Blog')}"></nav>
-        
-        <article class="row row-cols-1 row-cols-md-2 g-4">
-            <div class="col">
-                <div class="card">
-                    <img src="/images/Deomali.png" class="img img-fluid" alt="Deomali Hill">
-                    <div class="card-body">
-                        <h2 class="card-title">Deomali Hill</h2>
-                        <p class="card-text">
-                            Deomali is a mountain peak in the Koraput district of Odisha, India.
-                            It's the highest peak in the state, at 1,672 meters above sea level.
-                            Click below to explore
-                            more...
-                        </p>
-                        <a data-th-href="@{/explore}" class="btn btn-primary stretched-link">Explore</a>
+        <header data-th-replace="~{fragment :: heading-link-section(url='/add', name='Add Blog')}"></header>
+        <main>
+            <article data-th-each="place,loop : ${blogPlace}">
+                <div class="card mb-3" style="width: 70rem;">
+                    <div class="row no-gutters">
+                        <div class="col-md-4">
+                            <img src="/images/Deomali.png" class="img img-fluid" alt="Deomali Hill">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <div class="card-body">
+                                    <h2 class="card-title" data-th-utext="${place.heading}"></h2>
+                                    <p class="card-text" data-th-utext="${place.description}"></p>
+                                    <a data-th-href="|/explore?id=${loop.index}|" class="btn btn-primary stretched-link">Explore</a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="col">
-                <div class="card">
-                    <img src="/images/Mahendragiri-Hills.jpg" class="img-fluid"
-                        alt="Mahendragiri Hill">
-                    <div class="card-body">
-                        <h2 class="card-title">Mahendragiri Hill</h2>
-                        <p class="card-text">
-                            Mahendragiri is a mountain in the Rayagada subdivision of the
-                            Gajapati district in Odisha, India. It's the second highest peak in
-                            Odisha, standing at 4,925 ft (1,501 m). Click below to explore more...
-                        </p>
-                        <a href="#" class="btn btn-primary stretched-link">Explore</a>
+                <!-- <div class="col">
+                    <div class="card">
+                        <img src="/images/Mahendragiri-Hills.jpg" class="img-fluid" alt="Mahendragiri Hill">
+                        <div class="card-body">
+                            <h2 class="card-title">Mahendragiri Hill</h2>
+                            <p class="card-text">
+                                Mahendragiri is a mountain in the Rayagada subdivision of the
+                                Gajapati district in Odisha, India. It's the second highest peak in
+                                Odisha, standing at 4,925 ft (1,501 m). Click below to explore more...
+                            </p>
+                            <a href="#" class="btn btn-primary stretched-link">Explore</a>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="col">
-                <div class="card">
-                    <img src="/images/malyagiri2.jpg" class="img img-fluid" alt="Malyagiri Hill">
-                    <div class="card-body">
-                        <h2 class="card-title">Malyagiri Hill</h2>
-                        <p class="card-text">
-                            Malayagiri is a mountain peak in the Malayagiri hills subrange of
-                            the Garhjat Range in Odisha. It is the third highest mountain in
-                            Odisha, standing at 1,187 meters (3,894 ft). Click below to explore
-                            more...
-                        </p>
-                        <a href="#" class="btn btn-primary stretched-link">Explore</a>
+                <div class="col">
+                    <div class="card">
+                        <img src="/images/malyagiri2.jpg" class="img img-fluid" alt="Malyagiri Hill">
+                        <div class="card-body">
+                            <h2 class="card-title">Malyagiri Hill</h2>
+                            <p class="card-text">
+                                Malayagiri is a mountain peak in the Malayagiri hills subrange of
+                                the Garhjat Range in Odisha. It is the third highest mountain in
+                                Odisha, standing at 1,187 meters (3,894 ft). Click below to explore
+                                more...
+                            </p>
+                            <a href="#" class="btn btn-primary stretched-link">Explore</a>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="col">
-                <div class="card">
-                    <img src="/images/kalya-mali.jpg" class="img img-fluid" alt="Daringbadi">
-                    <div class="card-body">
-                        <h2 class="card-title">Kalya Mali Hill</h2>
-                        <p class="card-text">
-                            Kalya Māli is a mountain in the Eastern Ghats of India, located in the Koraput district of
-                            Odisha. It is the fourth highest peak in Odisha, at 1,548 meters. Click below to
-                            explore more...
-                        </p>
-                        <a href="#" class="btn btn-primary stretched-link">Explore</a>
+                <div class="col">
+                    <div class="card">
+                        <img src="/images/kalya-mali.jpg" class="img img-fluid" alt="Daringbadi">
+                        <div class="card-body">
+                            <h2 class="card-title">Kalya Mali Hill</h2>
+                            <p class="card-text">
+                                Kalya Māli is a mountain in the Eastern Ghats of India, located in the Koraput district
+                                of
+                                Odisha. It is the fourth highest peak in Odisha, at 1,548 meters. Click below to
+                                explore more...
+                            </p>
+                            <a href="#" class="btn btn-primary stretched-link">Explore</a>
+                        </div>
                     </div>
-                </div>
-            </div>
-        </article>
-        
+                </div>-->
+            </article>
+        </main>
         <footer data-th-replace="~{fragment :: footer-section}"></footer>
 </body>
 

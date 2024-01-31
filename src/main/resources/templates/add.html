@@ -1,25 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head data-th-replace="~{fragment :: head-section(name='Add Blog')}"></head>
-    <body>
-        <link rel="stylesheet" href="/css/add.css">
-        <div class="container">
-            <nav data-th-replace="~{fragment :: heading-link-section(url='/home', name='back to home')}"></nav>
-            <section>
-                <form action="/add" method="post">
-                    <div class="mb-3">
-                        <label for="exampleFormControlInput1" class="form-label"><h6><b>Blog Heading</b></h6></label>
-                        <input type="text" id="exampleFormControlInput1" class="form-control">
-                    </div>
-                    <div class="mb-3">
-                        <label for="exampleFormControlTextarea1" class="form-label"><h6><b>Blog Description</b></h6></label>
-                        <textarea id="exampleFormControlTextarea1" rows="12" class="form-control"></textarea>
-                    </div>
-                    
-                    <input type="submit" value="Add" class="btn" >
-                </form>
-            </section>   
-        </div>
-        <footer data-th-replace="~{fragment :: footer-section}"></footer>
-    </body>
+
+<head data-th-replace="~{fragment :: head-section}"></head>
+
+<body>
+  <link rel="stylesheet" href="/css/add.css" />
+  <div class="container">
+    <header data-th-replace="~{fragment :: heading-link-section(url='/home', name='back to home')}"></header>
+    <main>
+      <section>
+        <form action="/add" method="post">
+          <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">
+              <h6><b>Blog Heading</b></h6>
+            </label>
+            <input type="text" id="exampleFormControlInput1" class="form-control" name="heading" />
+          </div>
+          <div class="mb-3">
+            <label for="exampleFormControlTextarea1" class="form-label">
+              <h6><b>Blog Description</b></h6>
+            </label>
+            <textarea id="exampleFormControlTextarea1" rows="12" class="form-control" name="description"></textarea>
+          </div>
+  
+          <input type="submit" value="Add" class="btn gap-2 col-4 mx-auto" />
+        </form>
+      </section>
+    </main>
+  </div>
+  <footer data-th-replace="~{fragment :: footer-section}"></footer>
+</body>
+
 </html>

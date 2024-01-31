@@ -6,71 +6,69 @@
 <body>
     <link rel="stylesheet" href="/css/explore.css">
     <div class="container">
-        <nav data-th-replace="~{fragment :: heading-link-section(url='/home', name='back to home')}"></nav>
+        <header data-th-replace="~{fragment :: heading-link-section(url='/home', name='back to home')}"></header>
 
-        <div class="container-fluid">
-            <div class="heading">
-                <h1>Mesmerizing Journy to Deomali Hill</h1>
-                <caption>
-                    The highest mountain Peak of Odisha Deomali 1762 mt. high nestling
-                    in the lap of the Eastern Ghats is an idealic for Aero Gliding and
-                    trekking expeditions.
-                </caption>
+        <main>
+            <div class="container-fluid" data-th-object="${explore}">
+                <div class="heading">
+                    <h1 data-th-text="|The Mesmerizing *{heading}|"></h1>
+                    <caption data-th-text="*{description}"></caption>
+                </div>
+                <hr />
+                <div class="img">
+                    <img src="/images/deomali-hill-1878353.webp" class="img-fluid" alt="Deomali Hill" />
+                </div>
+    
+                <div class="explorebody">
+                    <section class="about">
+                        <h4>About:</h4>
+                        <p>
+                            The highest mountain Peak of Odisha Deomali 1762 mt. high nestling
+                            in the lap of the Eastern Ghats is an idealic for Aero Gliding and
+                            trekking expeditions. It is 60 Kms away from Koraput. Located at a
+                            distance of 65 km from Koraput town, Deomali is easily accessible
+                            by road. During the last ten odd km, I stopped multiple times and
+                            gazed at nature’s beauty with unbridled enthusiasm and happiness.
+                            As I kept climbing further and approached the last mile, the views
+                            and the feeling of being in the lap of Deomali Koraput were
+                            genuinely captivating and astounding. Deomali truly is OUTSTANDING
+                            and BREATHTAKING. The majestic views with a range of hills spread
+                            out in front of me as I gazed far into the horizon cannot be
+                            explained and put into words; such is the magnificence of being in
+                            the Eastern Ghats of India. Layer after layer of mountain ranges
+                            presented themselves, standing together as a band of brothers and
+                            DEOMALI peaking in above all as the charismatic leader.
+                        <h6><b>Facts about Deomali Hill</b></h6>
+                        <ol>
+                            <li>While Odisha enjoys a mild to moderate temperature, everything changes at Deomali. The
+                                temperature at Deomali is always considerably lower than the Koraput temperature or
+                                Semiliguda temperature. So be prepared accordingly for Deomali Weather.</li>
+                            <li>Solo travel at night to the Deomali hilltop is to be avoided.</li>
+                            <li>There is a single ghat road, and it is risky at night owing to wild animals and utter
+                                loneliness</li>
+                            <li>There is nothing at Deomali in case of any emergency</li>
+                            <li>Deomali mountain peak is in the middle of tribal land, with many tribes inhabiting the
+                                mountain villages. So, one needs to be mindful of this fact.</li>
+                        </ol>
+                        </p>
+                    </section>
+                </div>
             </div>
-            <hr />
-            <div class="img">
-                <img src="/images/Deomali-Hills-1.webp" class="img-fluid" alt="Deomali Hill" />
+    
+            <hr>
+    
+            <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Your Email</label>
+                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
             </div>
-
-            <div class="explorebody">
-                <section class="about">
-                    <h4>About:</h4>
-                    <p class="justify-right">
-                        The highest mountain Peak of Odisha Deomali 1762 mt. high nestling
-                        in the lap of the Eastern Ghats is an idealic for Aero Gliding and
-                        trekking expeditions. It is 60 Kms away from Koraput. Located at a
-                        distance of 65 km from Koraput town, Deomali is easily accessible
-                        by road. During the last ten odd km, I stopped multiple times and
-                        gazed at nature’s beauty with unbridled enthusiasm and happiness.
-                        As I kept climbing further and approached the last mile, the views
-                        and the feeling of being in the lap of Deomali Koraput were
-                        genuinely captivating and astounding. Deomali truly is OUTSTANDING
-                        and BREATHTAKING. The majestic views with a range of hills spread
-                        out in front of me as I gazed far into the horizon cannot be
-                        explained and put into words; such is the magnificence of being in
-                        the Eastern Ghats of India. Layer after layer of mountain ranges
-                        presented themselves, standing together as a band of brothers and
-                        DEOMALI peaking in above all as the charismatic leader.
-                    <h6><b>Facts about Deomali Hill</b></h6>
-                    <ol class="justify-right">
-                        <li>While Odisha enjoys a mild to moderate temperature, everything changes at Deomali. The
-                            temperature at Deomali is always considerably lower than the Koraput temperature or
-                            Semiliguda temperature. So be prepared accordingly for Deomali Weather.</li>
-                        <li>Solo travel at night to the Deomali hilltop is to be avoided.</li>
-                        <li>There is a single ghat road, and it is risky at night owing to wild animals and utter
-                            loneliness</li>
-                        <li>There is nothing at Deomali in case of any emergency</li>
-                        <li>Deomali mountain peak is in the middle of tribal land, with many tribes inhabiting the
-                            mountain villages. So, one needs to be mindful of this fact.</li>
-                    </ol>
-                    </p>
-                </section>
+            <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">Your Feedback</label>
+                <textarea name="feedback" class="form-control" id="feedback" rows="10"></textarea>
             </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
         </div>
-
-        <hr>
-
-        <div class="mb-3">
-            <label for="exampleInputEmail1" class="form-label">Your Email</label>
-            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-            <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
-        </div>
-        <div class="mb-3">
-            <label for="exampleInputPassword1" class="form-label">Your Feedback</label>
-            <textarea name="feedback" class="form-control" id="feedback" rows="10"></textarea>
-        </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
-    </div>
+        </main>
 
     <footer data-th-replace="~{fragment :: footer-section}"></footer>
 

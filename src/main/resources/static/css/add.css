@@ -21,8 +21,6 @@ body{
     border-color: cadetblue;
     background-color: teal;
     width: 5rem;
-    justify-content: end;
-    align-items: end;
 }
 .btn:hover{
     background-color: green;

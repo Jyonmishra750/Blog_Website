@@ -1,21 +1,7 @@
 package moblog.bubun.moblogproject;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import java.time.Year;
-import java.util.ArrayList;
-import java.util.List;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.autoconfigure.AutoConfigureOrder;
-
-import java.time.Year;
-import java.util.ArrayList;
-import java.util.List;
-
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.autoconfigure.AutoConfigureOrder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -48,7 +34,7 @@ public class Blog {
     }
 
     @PostMapping("/add")
-    public String getAdd(@ModelAttribute Place place) {
+    public String getAdd(@ModelAttribute Places place) {
         blogService.addPlace(place);
         return "redirect:/home";
     }

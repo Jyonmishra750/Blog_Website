@@ -10,15 +10,17 @@ import lombok.RequiredArgsConstructor;
 @Service
 @RequiredArgsConstructor
 public class BlogService {
-    private final ArrayList<Place> places;
-    
-    public void addPlace(Place place){
+    private final ArrayList<Places> places;
+
+    public void addPlace(Places place) {
         places.add(place);
     }
-    public List<Place> getBlogs(){
+
+    public List<Places> getBlogs() {
         return places;
     }
-    public Place getExplore(int index){
+
+    public Places getExplore(int index) {
         return places.get(index);
     }
 }

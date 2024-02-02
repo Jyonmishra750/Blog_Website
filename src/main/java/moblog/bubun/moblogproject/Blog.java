@@ -29,14 +29,29 @@ public class Blog {
 
     @GetMapping("/add")
     public String getAddBlog(Model model) {
+        Places place = new Places();
+        model.addAttribute("blog", place);
         model.addAttribute("year", year);
         return "add";
     }
 
-    @PostMapping("/add")
+    @PostMapping("/addblog")
     public String getAdd(@ModelAttribute Places place) {
-        blogService.addBlog(place);
+        if (place.getId()==0) {
+            blogService.addBlog(place);
+        }
+        else{
+            blogService.updateBlog(place);
+        }
         return "redirect:/home";
+    }
+
+    @GetMapping("/update")
+    public String getUpdateBlog(@RequestParam int id, Model model) {
+        var update = blogService.updateBlogPage(id);
+        model.addAttribute("blog", update);
+        model.addAttribute("year", year);
+        return "add";
     }
 
     @GetMapping("/explore")
@@ -45,20 +60,6 @@ public class Blog {
         model.addAttribute("explore", explore);
         model.addAttribute("year", year);
         return "explore";
-    }
-
-    @GetMapping("/update")
-    public String getUpdateBlog(@RequestParam int id, Model model) {
-        var update = blogService.updateBlogPage(id);
-        model.addAttribute("update", update);
-        model.addAttribute("year", year);
-        return "update";
-    }
-
-    @PostMapping("/update")
-    public String getUpdate(@ModelAttribute Places place) {
-        blogService.updateBlog(place);
-        return "redirect:/home";
     }
 
     @GetMapping("/delete")

@@ -1,7 +1,6 @@
 package moblog.bubun.moblogproject;
 
 import java.util.List;
-import java.util.Optional;
 
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
@@ -50,9 +49,7 @@ public class BlogService {
 
     public void updateBlog(Places place) {
         String sql = "UPDATE moblog SET heading=?, description=? WHERE id=?";
-        int id = place.getId();
-        Object[] args = new Object[]{place.getHeading(), place.getDescription(), id};
-        jdbcTemplate.update(sql, args);
+        jdbcTemplate.update(sql, place.getHeading(), place.getDescription(), place.getId());
     }
 
     public void deleteBlog(int blogid) {
@@ -60,5 +57,4 @@ public class BlogService {
         jdbcTemplate.update(sql, blogid);
     }
 
-    
 }

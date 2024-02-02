@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head data-th-replace="~{fragment :: head-section(name='Add Blog')}"></head>
+<head data-th-replace="~{fragment :: head-section}"></head>
 
 <body>
   <link rel="stylesheet" href="/css/add.css" />
@@ -9,18 +9,19 @@
     <header data-th-replace="~{fragment :: heading-link-section(url='/home', name='back to home')}"></header>
     <main>
       <section>
-        <form action="/add" method="post">
+        <form action="/addblog" method="post" data-th-object="${blog}">
+          <input type="hidden" name="id" data-th-field="*{id}" />
           <div class="mb-3">
             <label for="exampleFormControlInput1" class="form-label">
               <h6><b>Blog Heading</b></h6>
             </label>
-            <input type="text" id="exampleFormControlInput1" class="form-control" name="heading" />
+            <input type="text" id="exampleFormControlInput1" data-th-field="*{heading}" class="form-control" name="heading" />
           </div>
           <div class="mb-3">
             <label for="exampleFormControlTextarea1" class="form-label">
               <h6><b>Blog Description</b></h6>
             </label>
-            <textarea id="exampleFormControlTextarea1" rows="12" class="form-control" name="description"></textarea>
+            <textarea id="exampleFormControlTextarea1" rows="12" data-th-field="*{description}" class="form-control" name="description"></textarea>
           </div>
   
           <input type="submit" value="Add" class="btn gap-2 col-4 mx-auto" />

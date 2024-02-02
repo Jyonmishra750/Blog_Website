@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head data-th-replace="~{fragment :: head-section(name='Update Blog')}"></head>
+
+<body>
+  <link rel="stylesheet" href="/css/add.css" />
+  <div class="container">
+    <header data-th-replace="~{fragment :: heading-link-section(url='/home', name='back to home')}"></header>
+    <main>
+      <section>
+        <form action="/update" data-th-object="${update}" method="post">
+
+            <input type="hidden" name="id" data-th-field="*{id}" />
+
+          <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">
+              <h6><b>Update Blog Heading</b></h6>
+            </label>
+            <input type="text" id="exampleFormControlInput1" data-th-field="*{heading}" class="form-control" name="heading" />
+          </div>
+          <div class="mb-3">
+            <label for="exampleFormControlTextarea1" class="form-label">
+              <h6><b>Update Blog Description</b></h6>
+            </label>
+            <textarea id="exampleFormControlTextarea1" rows="12" data-th-field="*{description}" class="form-control" name="description"></textarea>
+          </div>
+  
+          <input type="submit" value="Update" class="btn gap-2 col-4 mx-auto" />
+        </form>
+      </section>
+    </main>
+  </div>
+  <footer data-th-replace="~{fragment :: footer-section}"></footer>
+</body>
+
+</html>

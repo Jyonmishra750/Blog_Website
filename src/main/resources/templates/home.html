@@ -19,7 +19,9 @@
                                 <div class="card-body">
                                     <h2 class="card-title" data-th-utext="${place.heading}"></h2>
                                     <p class="card-text" data-th-utext="${place.description}"></p>
-                                    <a data-th-href="|/explore?id=${place.id}|" class="btn btn-primary stretched-link">Explore</a>
+                                    <a data-th-href="|/explore?id=${place.id}|" class="btn btn-info">Explore</a>
+                                    <a data-th-href="|/update?id=${place.id}|" class="btn btn-warning">Update</a>
+                                    <a data-th-href="|/delete?id=${place.id}|" onclick="return confirm('Are you sure want to delete this blog?')" class="btn btn-danger">Delete</a>
                                 </div>
                             </div>
                         </div>

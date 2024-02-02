@@ -10,6 +10,7 @@ import lombok.Setter;
 @Getter
 @Setter
 public class Places {
+    private int id;
     private String heading;
     private String description;
 

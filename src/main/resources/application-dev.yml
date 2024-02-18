@@ -1,0 +1,10 @@
+server:
+  port: 1205
+
+spring:
+  datasource:
+    url: ${url}
+    username: ${s_username}
+    password: ${s_password}
+
+prefix: "JT:"

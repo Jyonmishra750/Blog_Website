@@ -13,7 +13,11 @@ import lombok.RequiredArgsConstructor;
 public class BlogService {
     private final JdbcTemplate jdbcTemplate;
 
+    // @Value("${prefix}")
+    // private String prefix;
+
     public void addBlog(Places place) {
+        // var heading = prefix + " " + place.getHeading();
         String sql = "INSERT INTO moblog (heading, description) VALUES(?, ?)";
         jdbcTemplate.update(sql, place.getHeading(), place.getDescription());
     }

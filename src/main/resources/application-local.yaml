@@ -1,0 +1,10 @@
+server:
+  port: 1200
+
+spring:
+  datasource:
+    url: ${url}
+    username: ${s_username}
+    password: ${s_password}
+
+prefix: "MB:"

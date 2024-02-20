@@ -1,9 +1,11 @@
-package moblog.bubun.moblogproject;
+package moblog.bubun.moblogproject.config;
 
 import java.util.ArrayList;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+
+import moblog.bubun.moblogproject.controller.Blog;
 
 @Configuration
 public class BlogConfig {

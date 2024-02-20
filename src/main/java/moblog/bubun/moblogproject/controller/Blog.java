@@ -1,22 +1,28 @@
-package moblog.bubun.moblogproject;
+package moblog.bubun.moblogproject.controller;
 
 import java.time.Year;
 
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import lombok.RequiredArgsConstructor;
+import moblog.bubun.moblogproject.model.Places;
+import moblog.bubun.moblogproject.service.BlogService;
 
 import org.springframework.web.bind.annotation.PostMapping;
 
 @Controller
-@RequiredArgsConstructor
 public class Blog {
 
     private final BlogService blogService;
+    
+    public Blog(@Qualifier("blogServiceClientImpl") BlogService blogService) {
+        this.blogService = blogService;
+    }
+
     Year year = Year.now();
     
     @GetMapping({ "/home", "/" })

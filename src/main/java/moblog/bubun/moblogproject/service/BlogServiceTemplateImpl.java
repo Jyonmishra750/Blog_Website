@@ -1,4 +1,4 @@
-package moblog.bubun.moblogproject;
+package moblog.bubun.moblogproject.service;
 
 import java.util.List;
 
@@ -7,10 +7,11 @@ import org.springframework.jdbc.core.RowMapper;
 import org.springframework.stereotype.Service;
 
 import lombok.RequiredArgsConstructor;
+import moblog.bubun.moblogproject.model.Places;
 
 @Service
 @RequiredArgsConstructor
-public class BlogService {
+public class BlogServiceTemplateImpl implements BlogService{
     private final JdbcTemplate jdbcTemplate;
 
     // @Value("${prefix}")

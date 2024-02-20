@@ -1,4 +1,4 @@
-package moblog.bubun.moblogproject;
+package moblog.bubun.moblogproject.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

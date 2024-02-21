@@ -1,10 +1,12 @@
 package moblog.bubun.moblogproject.service;
 
+import java.util.List;
+
 import moblog.bubun.moblogproject.model.Places;
 
 public interface BlogService {
 
-    Object getBlogs();
+    List<Places> getBlogs();
 
     void addBlog(Places place);
 

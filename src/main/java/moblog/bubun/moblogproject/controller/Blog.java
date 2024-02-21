@@ -54,7 +54,7 @@ public class Blog {
 
     @GetMapping("/update")
     public String getUpdateBlog(@RequestParam int id, Model model) {
-        var update = blogService.updateBlogPage(id);
+        var update = blogService.getExplore(id);
         model.addAttribute("blog", update);
         model.addAttribute("year", year);
         return "add";
